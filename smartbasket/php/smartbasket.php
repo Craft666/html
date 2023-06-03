@@ -5,6 +5,7 @@
 // ini_set('display_startup_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer;
 require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/config.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,14 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			}
 		}
 
-        if (isset($_POST['agreement']) ) {
+       /* if (isset($_POST['agreement']) ) {
             echo 'agreement';
             if(empty($_POST['agreement'])) {
                 echo 'agreement';
             } else {
                 $agreement = "<b>Соглашение: </b>" . strip_tags($_POST['agreement']) . "<br>";
             }
-        }
+        }*/
 
         if (isset($_POST['finalPrice']) ) {
             $finalPrice = "<b>Общая стоимость: </b>" . strip_tags($_POST['finalPrice']) . "<br>";
@@ -48,11 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$productArr=[];
 		$counter = 0;
-		$body;
+		$body = ' ';
 		$bodyHeader = '<table border="0" cellpadding="0" cellspacing="0" style="border-bottom:1px; border-right:1px; border-color:#e2e2e2; border-style: solid; width:800px" width="800" align="center">
 			<tr >
 				<th colspan="3" style="width: 400px; padding-top:15px; padding-bottom:15px; padding-right:15px; padding-left:15px; text-align:center; border-top:1px; border-left:1px; border-right:0; border-bottom:0; border-color:#e2e2e2; border-style: solid;">' . $name . $tel . $finalPrice .'</th>
-				<th colspan="4" style="width: 400px; padding-top:15px; padding-bottom:15px; padding-right:15px; padding-left:15px; text-align:center; border-top:1px; border-left:1px; border-right:0; border-bottom:0; border-color:#e2e2e2; border-style: solid;">' . $email . $agreement .'</th>
+				<th colspan="4" style="width: 400px; padding-top:15px; padding-bottom:15px; padding-right:15px; padding-left:15px; text-align:center; border-top:1px; border-left:1px; border-right:0; border-bottom:0; border-color:#e2e2e2; border-style: solid;">' . $email .'</th>
 			</tr>';
 
 		foreach ($_POST as $key =>  $value) {
@@ -92,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						} else {
 							$body.=
 								'<td style="width: 100px;  padding-top:15px; padding-bottom:15px; padding-right:15px; padding-left:15px; text-align:center; border-top:1px; border-left:1px; border-right:0; border-bottom:0; border-color:#e2e2e2; border-style: solid;" >
-									<div style="padding: 5px;"> Размер отстутствует </div>
+									<div style="padding: 5px;"> Размер: 1.5 спальный </div>
 								</td>';
 						}
 					}
@@ -157,21 +158,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mail = new PHPMailer;
 	}
 
-		$mail->setFrom(SENDER);
-    $mail->addAddress(CATCHER);
-    if(defined(CATCHER2)){
-        $mail->addAddress(CATCHER2);
-    }
+	$mail->setFrom(SENDER);
+    $mail->addBCC(CATCHER);
+    $mail->addAddress($_POST['userEmail']); // отправка письма для клиента
     $mail->CharSet = CHARSET;
     $mail->isHTML(true);
-		$mail->Subject = SUBJECT; // Заголовок письма
-		$mail->Body = "$bodyHeader $body $bodybottom";
-		if(!$mail->send()) {
-            echo 'attantion';
-        } else {
-            // echo '<p class="smartlid__respond-success">' . SUCCESSMSGS . '</p>';
-            echo 'successmsgs';
-        }
+	$mail->Subject = SUBJECT; // Заголовок письма
+	$mail->Body = "$bodyHeader $body $bodybottom";
+	
+	if(!$mail->send()) {
+        echo 'attantion';
+    } else {
+        // echo '<p class="smartlid__respond-success">' . SUCCESSMSGS . '</p>';
+        echo 'successmsgs';
+    }
+
 } else {
 	header ("Location: /");
 }
+
+
