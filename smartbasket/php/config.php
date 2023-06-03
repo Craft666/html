@@ -1,16 +1,16 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/phpmailer.php');
 
-***SMTP***
+//***SMTP***//
 		  require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/smtp.php');
-		  const HOST = 'smtp.mail.ru';
+		  const HOST = 'ssl://smtp.mail.ru';
 		 const LOGIN = 'bossbogdan2003@mail.ru';
-		  const PASS = 'wKgcX3Adf3Yn7HSimxSY';
+		  const PASS = 'cykableat007';
 		  const PORT = '465';
-***SMTP***
+//***SMTP***//
    
     const SENDER = 'bossbogdan2003@mail.ru';
-    const CATCHER = 'lijimaf439@rockdian.com';
+    const CATCHER = 'dasasxzxw1e12@mail.ru';
     const SUBJECT = 'Заявка с сайта';
     const CHARSET = 'UTF-8';
     
