@@ -6,7 +6,7 @@
     const HOST = 'smtp.gmail.com';
     const LOGIN = 'craft.21.play@gmail.com';
     const PASS = 'sonic202307032003';
-    const PORT = '587';
+    const PORT = '465';
 //***/SMTP***//
    
     const SENDER = 'craft.21.play@gmail.com';
