@@ -4,12 +4,12 @@
 // ***SMTP*** //
 		  require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/smtp.php');
 		  const HOST = 'smtp.timeweb.ru';
-	 const LOGIN = 'bossbogdan2003@mail.ru';
-	  const PASS = 't8LLYWjBbzP83ym7dMmd';
+	 const LOGIN = 'craft.21.play@gmail.com';
+	  const PASS = 'sonic202307032003';
 		  const PORT = '465';
 //***/SMTP***//
    
-    const SENDER = 'bossbogdan2003@mail.ru';
+    const SENDER = 'craft.21.play@gmail.com';
     const CATCHER = 'bossbogdan2003@mail.ru';
     const SUBJECT = 'Заявка с сайта';
     const CHARSET = 'UTF-8';
