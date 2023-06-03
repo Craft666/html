@@ -9,6 +9,7 @@
     const PORT = '587';
 //***/SMTP***//
    
+    const SENDER = 'craft.21.play@gmail.com';
    const CATCHER = 'craft.21.play@gmail.com';
    const SUBJECT = 'Заявка с сайта';
     const CHARSET = 'UTF-8';
