@@ -1,18 +1,16 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/phpmailer.php');
 
-		// *** SMTP *** //
-
-		 // require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/smtp.php');
-		 // const HOST = '';
-		 // const LOGIN = '';
-		 // const PASS = '';
-		 // const PORT = '';
-
-		// *** /SMTP *** //
+***SMTP***
+		  require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/smtp.php');
+		  const HOST = 'smtp.mail.ru';
+		 const LOGIN = 'bossbogdan2003@mail.ru';
+		  const PASS = 'cykableat007';
+		  const PORT = '465';
+***SMTP***
    
-    const SENDER = 'sender@yandex.ru';
-    const CATCHER = 'catcher@ya.ru';
+    const SENDER = 'bossbogdan2003@mail.ru';
+    const CATCHER = 'lijimaf439@rockdian.com';
     const SUBJECT = 'Заявка с сайта';
     const CHARSET = 'UTF-8';
     
