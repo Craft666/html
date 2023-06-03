@@ -3,7 +3,7 @@
 
 // ***SMTP*** //
 		  require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/smtp.php');
-		  const HOST = 'smtp.mail.ru';
+		  const HOST = 'smtp.timeweb.ru';
 	 const LOGIN = 'bossbogdan2003@mail.ru';
 	  const PASS = 't8LLYWjBbzP83ym7dMmd';
 		  const PORT = '465';
