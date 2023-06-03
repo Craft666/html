@@ -6,7 +6,7 @@
 		  const HOST = 'smtp.timeweb.ru';
 	 const LOGIN = 'craft.21.play@gmail.com';
 	  const PASS = 'sonic202307032003';
-		  const PORT = '25';
+		  const PORT = '2525';
 //***/SMTP***//
    
    // const SENDER = 'craft.21.play@gmail.com';
