@@ -5,7 +5,7 @@
 		  require_once($_SERVER['DOCUMENT_ROOT'] . '/smartbasket/php/phpmailer/smtp.php');
 		  const HOST = 'smtp.timeweb.ru';
 	 const LOGIN = 'craft.21.play@gmail.com';
-	  const PASS = 'sonic202307032003';
+	  const PASS = 'patapon2023';
 		  const PORT = '465';
 //***/SMTP***//
    
