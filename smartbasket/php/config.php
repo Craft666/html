@@ -9,8 +9,8 @@
 		  const PORT = '465';
 //***/SMTP***//
    
-    const SENDER = 'craft.21.play@gmail.com';
-    const CATCHER = 'bossbogdan2003@mail.ru';
-    const SUBJECT = 'Заявка с сайта';
-    const CHARSET = 'UTF-8';
+   // const SENDER = 'craft.21.play@gmail.com';
+  //  const CATCHER = 'bossbogdan2003@mail.ru';
+  //  const SUBJECT = 'Заявка с сайта';
+   // const CHARSET = 'UTF-8';
     
