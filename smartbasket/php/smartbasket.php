@@ -151,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mail->SMTPAuth = true;
 		$mail->Username = LOGIN;
 		$mail->Password = PASS;
-		$mail->SMTPSecure = 'tls';
+		$mail->SMTPSecure = 'ssl';
 		$mail->Port = PORT;
 		$mail->AddReplyTo(SENDER);
 	} else {
