@@ -133,9 +133,18 @@
 			<span class="product__available">В наличии: 50 000 шт.</span>
 			<a class="btn-ens-action btn-ens-style" data-rel="a8492677313372">Купить</a>
 <div id="easynetshop-custom-orderfinalform">
-     Спасибо! Вы успешно оформили заказ №{%zakaz%} на сумму {%itogo%} руб.<br>
-     Информация о деталях заказа направлена на вашу почту: {%email%}
+	Заказ №{%zakaz%} оформлен, с вами свяжется наш менеджер!
+			<br>Вы можете оплатить заказ:<br>
+			<iframe frameborder="0" allowtransparency="true" scrolling="no" 
+			src="https://yoomoney.ru/embed/shop.xml?
+			account=410014493920221
+			&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller
+			&targets={%zakaz%}+demo.easynetshop.ru
+			&default-sum={%itogo%}
+			&button-text=01
+			&successURL=" width="450" height="228"></iframe>
 </div>
+
 		</div>
 		<div class="product__price ">
             <div class="product__price product-price__current"><span class="product__price-number">50</span> ₽</div>
