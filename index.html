@@ -42,19 +42,15 @@
             </div>
 
             <div class='btn' tabindex="0">
-                <!--Библиотека jQuery-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <div class='button'>
+                	КОРЗИНА
+                <span class="cart2__quantity"></span>
+                </div>
+                            <form action="">
+		<button  class="product__btn">КОРЗИНА</button>
+		<a href="https://pokupo.ru/payment/57709/payment#//&amount=120&mailUser=bossbogdan2003%40mail.ru&description=%D1%8B%D1%84%D1%81%D1%84%D1%8B%D1%81">КИПИЧ</a>
 
-<!--Готовый скрипт корзины-->
-<script defer src="https://lk.easynetshop.ru/frontend/v5/ens-a8492677.js"></script>
-
-<!--Стили элементов для корзины-->
-<link href="https://lk.easynetshop.ru/frontend/v5/ens-a8492677.css" rel="stylesheet">
-
-
-
-               
-                    
+        </form>
             </div>
         </div>
         
@@ -203,8 +199,6 @@
 		<div class="product__price product-price">
 			<span class="product-price__current">2470₽ лист</span>
 			<span class="product-price__old">/За один м2</span>
-			<a class="btn-ens-action btn-ens-style" data-rel="a8492677313373">Купить</a>
-
 		</div>
         <form action="index5.html">
 		<button class="product__btn">Добавить в корзину</button>
@@ -420,6 +414,71 @@
 
 
 
+<link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'product',
+				buttonAddToBasket: 'product__btn',
+				productPrice: 'product__price-number',
+				productSize: 'product__size-element',
+				
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'button',
+				countryCode: '+7',
+				smartBasketCurrency: '₽',
+				smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://www.stroika-store.ru/index.html',
+				},
+				nameIsRequired: true,
+				telIsRequired: true,
+                emailIsRequired: true,
+			});
+		});
+	</script>
+
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-e2cd5312-0fa7-48f2-a602-f9f3852237ca"></div>
+
+
+<!--Библиотека jQuery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--Готовый скрипт корзины-->
+<script defer src="https://lk.easynetshop.ru/frontend/v5/ens-a8492677.js"></script>
+
+<!--Стили элементов для корзины-->
+<link href="https://lk.easynetshop.ru/frontend/v5/ens-a8492677.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
 <link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
 
 <div class="smart-basket__wrapper"></div>
