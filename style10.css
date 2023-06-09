@@ -3,7 +3,8 @@ body {
     font-family: 'Open Sans', sans-serif;
      background-image: url(back1.jpg);
     background-repeat: no-repeat;
-    min-width: 1920px; 
+    min-width: 1920px;
+	zoom: 100%;
 }
 
 .container {
